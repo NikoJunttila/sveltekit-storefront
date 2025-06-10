@@ -9,7 +9,6 @@ declare global {
 			PUBLIC_SHOPAPI_DEV_URL: string;
 			PUBLIC_SHOPAPI_PROD_URL: string;
 			PUBLIC_REQUIRE_EMAIL_VERIFICATION: boolean;
-			PUBLIC_DEFAULT_CURRENCY: string;
 			PUBLIC_SITE_NAME: string;
 			PUBLIC_SITE_IMAGE: string;
 			PUBLIC_SITE_URL: string;
@@ -28,6 +27,7 @@ declare global {
 			PUBLIC_TWITTER_URL: string;
 			PUBLIC_YOUTUBE_URL: string;
 			PUBLIC_STRIPE_REDIRECT_URL: string;
+			PUBLIC_GOOGLE_TAG_MANAGER: string;
 		}
 	}
 }

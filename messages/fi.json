@@ -373,7 +373,7 @@
 	"increase_item_quantity_label":"Lisää tuote",
 	"remove_item_label":"Poista tuote",
 	"if_order":"Jos tilaus on maksettu ja tämä näkyy sivun päivittämisen jälkeen, etkä ole saanut sähköpostivarmistusta tilauksesta. Ota yhteyttä asiakaspalveluun:",
-	"related_products":"Muita tuotteita",
+	"related_products":"Vastaavia tuotteita",
 	"error_loading_products":"Error loading products",
 	"try_again":"Yritä uudestaan",
 	"related_not_found":"Tähän liittyviä tuotteita ei löytynyt"

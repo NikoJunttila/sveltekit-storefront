@@ -1,6 +1,6 @@
 sveltekit vendure storefront with starting point coming from this repo: https://github.com/pevey/sveltekit-storefront
 
-vendure needs stripe plugin and my custom paytrail plugin. Recommended to just remove all paytrail code from project.
+vendure needs stripe plugin.
 
 # SvelteKit eCommerce Store Starter App for Vendure
 
@@ -13,7 +13,7 @@ Currently, this starter uses Stripe checkout only.  Your backend must be configu
 npm install -g degit
 
 # create a new project in my-app
-degit https://github.com/NikoJunttila/vendure-svelte-pevey-storefront.git my-app
+degit https://github.com/NikoJunttila/sveltekit-storefront.git my-app
 ```
 
 ## Installing packages
@@ -32,7 +32,7 @@ mv .env.example .env
 
 - To make development a bit easier, you can change the urls in the EmailPlugin configuration options in vendure-config.ts to match the default SvelteKit dev url: http://localhost:5173:
 
-`majel-config.ts`
+`vendure-config.ts`
 ```js
 verifyEmailAddressUrl: 'http://localhost:5173/verify',
 passwordResetUrl: 'http://localhost:5173/auth',
@@ -59,7 +59,7 @@ Make sure your backend is running first and that you configure the api urls in y
 npm dev
 ```
 
-For analytics get google tag manager and change in analyticsConsent.svelte file correct when tag is correctly configured
+For analytics get google tag manager add to .env, when tag is correctly configured<br><br>
 
-For 1gb vm builds
+For 1gb vm builds<br>
 NODE_OPTIONS="--max-old-space-size=768" npm run build
