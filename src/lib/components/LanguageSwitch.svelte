@@ -2,14 +2,20 @@
 	import type { AvailableLanguageTag } from '$lib/paraglide/runtime';
 	import { i18n } from '$lib/i18n';
 	import { page } from '$app/state';
+	import { PUBLIC_VENDURE_SUPPORT_MULTI_LANGUAGE } from '$env/static/public';
 	import { goto } from '$app/navigation';
 
 	function switchToLanguage(newLanguage: AvailableLanguageTag) {
 		const canonicalPath = i18n.route(page.url.pathname);
 		const localisedPath = i18n.resolveRoute(canonicalPath, newLanguage);
 		goto(localisedPath);
+		if (PUBLIC_VENDURE_SUPPORT_MULTI_LANGUAGE == 'true') {
+			//force refresh page if using multiple languages on items
+			setTimeout(() => {
+				location.reload();
+			}, 100);
+		}
 	}
-
 	// Determine the current language based on the URL.
 	const currentLang = page.url.pathname.startsWith('/en') ? 'en' : 'fi';
 </script>

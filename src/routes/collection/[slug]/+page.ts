@@ -20,18 +20,18 @@ export const load = async function ({ parent, params }) {
 		collection: await client
 			.query(GetCollection, { slug: params.slug })
 			.toPromise()
-			.then((result) => result?.data?.collection),
+			.then((result : any) => result?.data?.collection),
 		products: await client
 			.query(GetCollection, { slug: params.slug })
 			.toPromise()
-			.then((result) => result?.data?.search?.items),
+			.then((result : any) => result?.data?.search?.items),
 		collections: await client
 			.query(GetCollections, {})
 			.toPromise()
-			.then((result) => result?.data?.collections?.items),
+			.then((result : any) => result?.data?.collections?.items),
 		search: await client
 			.query(SearchProducts, { input })
 			.toPromise()
-			.then((result) => result?.data?.search)
+			.then((result : any) => result?.data?.search)
 	};
 } satisfies PageLoad;

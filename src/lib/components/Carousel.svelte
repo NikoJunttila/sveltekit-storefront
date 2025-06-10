@@ -132,13 +132,13 @@
 
 							<div class="mt-auto">
 								{#if product.price}
-									<div class="flex items-center justify-between">
+									<div class="flex items-center gap-1">
 										<span class="text-lg font-bold text-gray-900">
 											{formatCurrency(product.price.min, product.currencyCode)}
 										</span>
 
 										{#if product.price.min !== product.price.max}
-											<span class="text-sm text-gray-500">
+											<span class="text-lg font-bold text-gray-900">
 												- {formatCurrency(product.price.max, product.currencyCode)}
 											</span>
 										{/if}
