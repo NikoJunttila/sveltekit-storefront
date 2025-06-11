@@ -17,10 +17,10 @@
 	import Banner from '$lib/components/Banner.svelte';
 	import Paginations from '$src/lib/components/Paginations.svelte';
 
-	let products: SearchResultFragment[] = $state(
+	let products: any = $state(
 		useFragment(SearchResult, data.search?.items ?? [])
 	);
-	let facetValues: FacetValueResultFragment[] = $state(
+	let facetValues: any = $state(
 		useFragment(FacetValueResult, data.search?.facetValues ?? [])
 	);
 	const total = $derived(data.search?.totalItems || 0);
@@ -47,7 +47,7 @@
 	$effect(() => {
 		if ($searchQuery.data?.search.items) {
 			products = useFragment(SearchResult, $searchQuery.data.search.items);
-			filteredProducts = useFragment(SearchResult, $searchQuery.data.search.items);
+			filteredProducts = useFragment(SearchResult, $searchQuery.data.search.items) as any
 		}
 		if ($searchQuery.data?.search.facetValues) {
 			facetValues = useFragment(FacetValueResult, $searchQuery.data.search.facetValues);
@@ -58,7 +58,7 @@
 	// Group facets by type (category/brand)
 	const groupedFacets = $derived(
 		facetValues.reduce(
-			(acc, fv) => {
+			(acc : any, fv : any) => {
 				const facetName = fv.facetValue.facet.name;
 				if (!acc[facetName]) {
 					acc[facetName] = [];
@@ -89,8 +89,8 @@
 		Array.from(selectedFilters).every((filterId) => p.facetValueIds.includes(filterId))
 	); */
 		filteredProducts = products.filter(
-			(product) =>
-				selectedFilters.size === 0 || product.facetValueIds.some((id) => selectedFilters.has(id))
+			(product : any) =>
+				selectedFilters.size === 0 || product.facetValueIds.some((id :any) => selectedFilters.has(id))
 		);
 		filterSize = selectedFilters.size;
 	}

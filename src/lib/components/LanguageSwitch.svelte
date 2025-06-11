@@ -17,7 +17,7 @@
 		}
 	}
 	// Determine the current language based on the URL.
-	const currentLang = page.url.pathname.startsWith('/en') ? 'en' : 'fi';
+	const currentLang = page.url.pathname.startsWith('/fi') ? 'fi' : 'en';
 </script>
 
 <div

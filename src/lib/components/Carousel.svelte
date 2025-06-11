@@ -52,7 +52,6 @@
 		return `/product/${product.slug}`;
 	}
 
-	// The $effect hook is now much simpler
 	$effect(() => {
 		getProducts();
 	});

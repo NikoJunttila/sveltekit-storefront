@@ -13,7 +13,7 @@
 	const client = getContextClient();
 
 	interface Props {
-		filteredProducts: SearchResultFragment[];
+		filteredProducts: any;
 	}
 	let { filteredProducts }: Props = $props();
 

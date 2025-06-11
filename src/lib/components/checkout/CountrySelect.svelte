@@ -22,7 +22,7 @@
   }
 
   let { 
-    selectedCountryCode = $bindable("FI"),
+    selectedCountryCode = $bindable(""),
     onError = (error: string) => console.error(error) 
   } : Props = $props();
   
@@ -149,7 +149,7 @@
   
   // Effects
   $effect(() => {
-    if (selectedCountryCode && !inputValue) {
+    if (selectedCountryCode) {
       const country = countries.find(c => c.code === selectedCountryCode);
       if (country) {
         inputValue = country.name;
