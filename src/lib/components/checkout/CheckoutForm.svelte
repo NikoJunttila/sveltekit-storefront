@@ -28,7 +28,7 @@
 	let { valid = $bindable() } = $props();
 	let customerValid = $state(false);
 	let addressValid = $state(false);
-	let countryCode = $state('FI');
+	let countryCode = $state('');
 
 	$effect(() => {
 		customerValid = validateCustomerForm();

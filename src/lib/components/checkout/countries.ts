@@ -45,9 +45,6 @@ export default [{
   "code": "ES"
 },
 {
-  "name": "Suomi",
-  "code": "FI"
-}, {
   "name": "Finland",
   "code": "FI"
 }, {

@@ -12,8 +12,8 @@ Currently, this starter uses Stripe checkout only.  Your backend must be configu
 # install degit
 npm install -g degit
 
-# create a new project in my-app
-degit https://github.com/NikoJunttila/sveltekit-storefront.git my-app
+# create a new project in storefront
+degit https://github.com/NikoJunttila/sveltekit-storefront.git storefront
 ```
 
 ## Installing packages
