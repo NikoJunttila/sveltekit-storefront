@@ -19,7 +19,7 @@ degit https://github.com/NikoJunttila/sveltekit-storefront.git storefront
 ## Installing packages
 
 ```bash
-cd my-app
+cd storefront
 npm install
 ```
 

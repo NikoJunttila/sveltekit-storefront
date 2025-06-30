@@ -58,7 +58,7 @@
 </script>
 
 <section class="px-4 py-8">
-	<h2 class="mb-8 text-center text-3xl font-bold text-gray-900">{m.related_products()}</h2>
+	<h2 class="mb-8 text-center text-3xl font-bold text-gray-50 dark:text-gray-900">{m.related_products()}</h2>
 
 	{#if loading}
 		<div class="flex items-center justify-center py-12">
